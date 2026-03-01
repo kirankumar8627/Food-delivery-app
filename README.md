@@ -6,24 +6,9 @@ A full-stack, cloud-native food delivery application built with React, Node.js, 
 
 ## 🏗️ Architecture
 
-```
-                          ┌─────────────────────────────────────┐
-                          │           AWS Cloud (us-east-1)      │
-                          │                                       │
-  User Browser ──HTTPS──► │  [Route53] ──► [ALB]                 │
-                          │              (Public Subnet)          │
-                          │                │                      │
-                          │    ┌───────────┴──────────┐          │
-                          │    ▼                      ▼           │
-                          │  [Frontend Pods]    [Backend Pods]    │
-                          │   React/Nginx        Node.js API      │
-                          │   (Private Subnet)  (Private Subnet)  │
-                          │                          │            │
-                          │                          ▼            │
-                          │                    [RDS MySQL]        │
-                          │                  (Private Subnet)     │
-                          │                  No internet access   │
-                          └─────────────────────────────────────  ┘
+``     
+<img width="1408" height="768" alt="Gemini_Generated_Image_ngyq5ongyq5ongyq" src="https://github.com/user-attachments/assets/271a7583-0760-4f9a-8e34-4bd70e760d61" />
+
 ```
 
 ### Network Design
